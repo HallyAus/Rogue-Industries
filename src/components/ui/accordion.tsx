@@ -20,17 +20,17 @@ export function Accordion({ items }: AccordionProps) {
       {items.map((item, index) => (
         <div
           key={index}
-          className="rounded-xl border border-[#292524] bg-[#1C1917] overflow-hidden"
+          className="rounded-2xl border border-[#E8DFD0] bg-white overflow-hidden shadow-sm"
         >
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            className="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-[#292524]/50"
+            className="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-[#FFFBF5]"
           >
-            <span className="pr-4 text-lg font-medium text-[#FAFAF9]">
+            <span className="pr-4 text-lg font-medium text-[#2C2418]">
               {item.question}
             </span>
             <span
-              className={`shrink-0 text-[#D97706] transition-transform duration-300 ${
+              className={`shrink-0 text-[#4A7C6F] transition-transform duration-300 ${
                 openIndex === index ? "rotate-45" : ""
               }`}
             >
@@ -48,7 +48,7 @@ export function Accordion({ items }: AccordionProps) {
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <div className="px-6 pb-5 text-[#A8A29E] leading-relaxed">
+                <div className="px-6 pb-5 text-[#8B7E6A] leading-relaxed">
                   {item.answer}
                 </div>
               </motion.div>

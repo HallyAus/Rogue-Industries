@@ -26,7 +26,7 @@ function SocialIcon({ platform, href }: { platform: string; href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex h-10 w-10 items-center justify-center rounded-lg text-[#A8A29E] transition-all hover:bg-[#292524] hover:text-[#D97706]"
+      className="flex h-10 w-10 items-center justify-center rounded-lg text-[#FFFBF5]/60 transition-all hover:bg-white/10 hover:text-[#D4943A]"
       aria-label={`Follow on ${platform}`}
     >
       {icons[platform]}
@@ -36,22 +36,22 @@ function SocialIcon({ platform, href }: { platform: string; href: string }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#292524] bg-[#0C0A09]">
+    <footer className="bg-[#2C2418]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="group inline-flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#D97706] to-[#F59E0B]">
-                <svg viewBox="0 0 24 24" className="h-6 w-6 text-[#0C0A09]" fill="currentColor">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4A7C6F]">
+                <svg viewBox="0 0 24 24" className="h-6 w-6 text-white" fill="currentColor">
                   <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 16h-1V9h-2v10h-1V9h-2v10h-1V9H8v10H7V5h10v14z" />
                 </svg>
               </div>
-              <span className="text-lg font-serif font-bold text-[#FAFAF9]">
+              <span className="text-lg font-serif font-bold text-[#FFFBF5]">
                 {SITE_CONFIG.name}
               </span>
             </Link>
-            <p className="mt-4 text-sm text-[#A8A29E] leading-relaxed">
+            <p className="mt-4 text-sm text-[#FFFBF5]/50 leading-relaxed">
               Piano lessons with heart. Learn from Keon Wu in Ourimbah, NSW or
               online from anywhere.
             </p>
@@ -64,7 +64,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FAFAF9]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FFFBF5]">
               Navigation
             </h3>
             <ul className="mt-4 space-y-3">
@@ -72,7 +72,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#A8A29E] transition-colors hover:text-[#D97706]"
+                    className="text-sm text-[#FFFBF5]/50 transition-colors hover:text-[#D4943A]"
                   >
                     {link.label}
                   </Link>
@@ -83,27 +83,27 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FAFAF9]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FFFBF5]">
               Services
             </h3>
             <ul className="mt-4 space-y-3">
               <li>
-                <Link href="/lessons#face-to-face" className="text-sm text-[#A8A29E] transition-colors hover:text-[#D97706]">
+                <Link href="/lessons#face-to-face" className="text-sm text-[#FFFBF5]/50 transition-colors hover:text-[#D4943A]">
                   Face-to-Face Lessons
                 </Link>
               </li>
               <li>
-                <Link href="/lessons#online" className="text-sm text-[#A8A29E] transition-colors hover:text-[#D97706]">
+                <Link href="/lessons#online" className="text-sm text-[#FFFBF5]/50 transition-colors hover:text-[#D4943A]">
                   Online Lessons
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-sm text-[#A8A29E] transition-colors hover:text-[#D97706]">
+                <Link href="/resources" className="text-sm text-[#FFFBF5]/50 transition-colors hover:text-[#D4943A]">
                   Sheet Music
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-sm text-[#A8A29E] transition-colors hover:text-[#D97706]">
+                <Link href="/resources" className="text-sm text-[#FFFBF5]/50 transition-colors hover:text-[#D4943A]">
                   Learning Resources
                 </Link>
               </li>
@@ -112,22 +112,22 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FAFAF9]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#FFFBF5]">
               Get in Touch
             </h3>
             <ul className="mt-4 space-y-3">
-              <li className="text-sm text-[#A8A29E]">
-                <span className="block text-[#FAFAF9]">Location</span>
+              <li className="text-sm text-[#FFFBF5]/50">
+                <span className="block text-[#FFFBF5]/80">Location</span>
                 {SITE_CONFIG.contact.location}
               </li>
-              <li className="text-sm text-[#A8A29E]">
-                <span className="block text-[#FAFAF9]">Hours</span>
+              <li className="text-sm text-[#FFFBF5]/50">
+                <span className="block text-[#FFFBF5]/80">Hours</span>
                 {SITE_CONFIG.contact.hours}
               </li>
               <li>
                 <a
                   href={`mailto:${SITE_CONFIG.contact.email}`}
-                  className="text-sm text-[#D97706] transition-colors hover:text-[#F59E0B]"
+                  className="text-sm text-[#D4943A] transition-colors hover:text-[#D4943A]/80"
                 >
                   {SITE_CONFIG.contact.email}
                 </a>
@@ -137,14 +137,14 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[#292524] pt-8 sm:flex-row">
-          <p className="text-sm text-[#78716C]">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+          <p className="text-sm text-[#FFFBF5]/30">
             &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights
             reserved.
           </p>
-          <p className="text-sm text-[#78716C]">
+          <p className="text-sm text-[#FFFBF5]/30">
             Piano lessons in{" "}
-            <span className="text-[#A8A29E]">Ourimbah, Central Coast NSW</span>
+            <span className="text-[#FFFBF5]/50">Ourimbah, Central Coast NSW</span>
           </p>
         </div>
       </div>

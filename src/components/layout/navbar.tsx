@@ -25,23 +25,23 @@ export function Navbar() {
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-500 ${
         isScrolled
-          ? "bg-[#0C0A09]/95 backdrop-blur-md shadow-lg shadow-black/20 border-b border-[#292524]/50"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md shadow-lg shadow-[#2C2418]/5 border-b border-[#E8DFD0]"
+          : "bg-[#FFFBF5]/80 backdrop-blur-sm"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#D97706] to-[#F59E0B]">
-            <svg viewBox="0 0 24 24" className="h-6 w-6 text-[#0C0A09]" fill="currentColor">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4A7C6F] shadow-md shadow-[#4A7C6F]/20">
+            <svg viewBox="0 0 24 24" className="h-6 w-6 text-white" fill="currentColor">
               <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 16h-1V9h-2v10h-1V9h-2v10h-1V9H8v10H7V5h10v14z" />
             </svg>
           </div>
           <div>
-            <span className="block text-lg font-serif font-bold text-[#FAFAF9] group-hover:text-[#D97706] transition-colors">
+            <span className="block text-lg font-serif font-bold text-[#2C2418] group-hover:text-[#4A7C6F] transition-colors">
               {SITE_CONFIG.name}
             </span>
-            <span className="block text-xs text-[#A8A29E] -mt-0.5 tracking-wider uppercase">
+            <span className="block text-xs text-[#A89F91] -mt-0.5 tracking-wider uppercase">
               {SITE_CONFIG.teacher.name}
             </span>
           </div>
@@ -57,15 +57,15 @@ export function Navbar() {
                 href={link.href}
                 className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   isActive
-                    ? "text-[#D97706]"
-                    : "text-[#A8A29E] hover:text-[#FAFAF9] hover:bg-[#292524]/50"
+                    ? "text-[#4A7C6F]"
+                    : "text-[#8B7E6A] hover:text-[#2C2418] hover:bg-[#4A7C6F]/5"
                 }`}
               >
                 {link.label}
                 {isActive && (
                   <motion.div
                     layoutId="navbar-active"
-                    className="absolute bottom-0 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-[#D97706]"
+                    className="absolute bottom-0 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-[#4A7C6F]"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -74,7 +74,7 @@ export function Navbar() {
           })}
           <Link
             href="/contact"
-            className="ml-4 rounded-lg bg-gradient-to-r from-[#D97706] to-[#F59E0B] px-5 py-2.5 text-sm font-semibold text-[#0C0A09] transition-all hover:from-[#F59E0B] hover:to-[#D97706] shadow-lg shadow-amber-900/20"
+            className="ml-4 rounded-xl bg-[#4A7C6F] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#3A6357] shadow-md shadow-[#4A7C6F]/20 hover:shadow-lg"
           >
             Book a Lesson
           </Link>
@@ -83,7 +83,7 @@ export function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-[#FAFAF9] transition-colors hover:bg-[#292524] md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-[#2C2418] transition-colors hover:bg-[#4A7C6F]/5 md:hidden"
           aria-label="Toggle menu"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -111,7 +111,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="border-t border-[#292524] bg-[#0C0A09]/98 backdrop-blur-lg md:hidden"
+            className="border-t border-[#E8DFD0] bg-white/98 backdrop-blur-lg md:hidden"
           >
             <div className="space-y-1 px-4 py-4">
               {NAV_LINKS.map((link) => {
@@ -120,10 +120,10 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
+                    className={`block rounded-xl px-4 py-3 text-base font-medium transition-colors ${
                       isActive
-                        ? "bg-[#D97706]/10 text-[#D97706]"
-                        : "text-[#A8A29E] hover:bg-[#292524]/50 hover:text-[#FAFAF9]"
+                        ? "bg-[#4A7C6F]/10 text-[#4A7C6F]"
+                        : "text-[#8B7E6A] hover:bg-[#FFFBF5] hover:text-[#2C2418]"
                     }`}
                   >
                     {link.label}
@@ -133,7 +133,7 @@ export function Navbar() {
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="block rounded-lg bg-gradient-to-r from-[#D97706] to-[#F59E0B] px-4 py-3 text-center text-base font-semibold text-[#0C0A09]"
+                  className="block rounded-xl bg-[#4A7C6F] px-4 py-3 text-center text-base font-semibold text-white"
                 >
                   Book a Lesson
                 </Link>

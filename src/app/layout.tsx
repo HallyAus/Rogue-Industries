@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-sans",
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -62,12 +70,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-AU" className={inter.variable}>
+    <html lang="en-AU" className={`${playfair.variable} ${dmSans.variable}`}>
       <head>
         <JsonLd type="LocalBusiness" />
         <JsonLd type="Person" />
       </head>
-      <body className="bg-[#0C0A09] text-[#FAFAF9] antialiased">
+      <body className="bg-[#FFFBF5] text-[#2C2418] font-sans antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />

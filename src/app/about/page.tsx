@@ -16,17 +16,17 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0C0A09] pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-[#D97706]/5 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#FFFBF5] pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-[#4A7C6F]/[0.04] blur-3xl" />
         <div className="mx-auto max-w-4xl text-center relative">
           <ScrollReveal>
-            <span className="text-sm font-medium uppercase tracking-widest text-[#D97706]">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#4A7C6F]">
               About
             </span>
-            <h1 className="mt-3 font-serif text-4xl font-bold text-[#FAFAF9] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 font-serif text-4xl font-bold text-[#2C2418] sm:text-5xl lg:text-6xl">
               The Story Behind the Music
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[#A8A29E] leading-relaxed">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[#8B7E6A] leading-relaxed">
               Every musician has a story. Here&apos;s mine.
             </p>
           </ScrollReveal>
@@ -34,28 +34,28 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <Section>
+      <Section dark>
         <div className="grid gap-16 lg:grid-cols-2 items-center">
           <ScrollReveal direction="left">
-            <div className="relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#1C1917] to-[#292524] border border-[#292524]">
+            <div className="relative aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-[#4A7C6F]/10 to-[#D4943A]/10 border border-[#E8DFD0]">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="mx-auto mb-4 flex h-32 w-32 items-center justify-center rounded-full bg-[#D97706]/10">
-                    <svg viewBox="0 0 24 24" className="h-16 w-16 text-[#D97706]" fill="none" stroke="currentColor" strokeWidth="1">
+                  <div className="mx-auto mb-4 flex h-32 w-32 items-center justify-center rounded-full bg-[#4A7C6F]/10">
+                    <svg viewBox="0 0 24 24" className="h-16 w-16 text-[#4A7C6F]" fill="none" stroke="currentColor" strokeWidth="1">
                       <path d="M9 18V5l12-2v13" />
                       <circle cx="6" cy="18" r="3" />
                       <circle cx="18" cy="16" r="3" />
                     </svg>
                   </div>
-                  <p className="text-sm text-[#78716C]">Photo of Keon coming soon</p>
+                  <p className="text-sm text-[#A89F91]">Photo of Keon coming soon</p>
                 </div>
               </div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal direction="right">
-            <div className="space-y-6 text-[#A8A29E] leading-relaxed">
-              <h2 className="font-serif text-3xl font-bold text-[#FAFAF9]">
+            <div className="space-y-6 text-[#8B7E6A] leading-relaxed">
+              <h2 className="font-serif text-3xl font-bold text-[#2C2418]">
                 G&apos;day, I&apos;m Keon
               </h2>
               <p>
@@ -89,7 +89,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Teaching Philosophy */}
-      <Section dark>
+      <Section>
         <SectionHeader
           title="My Teaching Philosophy"
           subtitle="Three principles that guide every lesson"
@@ -133,14 +133,14 @@ export default function AboutPage() {
             },
           ].map((item, index) => (
             <ScrollReveal key={item.title} delay={index * 0.1}>
-              <div className="rounded-2xl border border-[#292524] bg-[#1C1917] p-8 text-center">
-                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#D97706]/10 text-[#D97706]">
+              <div className="rounded-2xl border border-[#E8DFD0] bg-white p-8 text-center shadow-sm">
+                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4A7C6F]/10 text-[#4A7C6F]">
                   {item.icon}
                 </div>
-                <h3 className="mb-3 text-xl font-serif font-bold text-[#FAFAF9]">
+                <h3 className="mb-3 text-xl font-serif font-bold text-[#2C2418]">
                   {item.title}
                 </h3>
-                <p className="text-[#A8A29E] leading-relaxed">
+                <p className="text-[#8B7E6A] leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Social / Connect */}
-      <Section>
+      <Section dark>
         <div className="text-center">
           <ScrollReveal>
             <SectionHeader
@@ -168,10 +168,10 @@ export default function AboutPage() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 rounded-xl border border-[#292524] bg-[#1C1917] px-6 py-4 transition-all hover:border-[#D97706]/30 hover:-translate-y-1"
+                  className="flex items-center gap-3 rounded-2xl border border-[#E8DFD0] bg-white px-6 py-4 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
                 >
-                  <span className="font-semibold text-[#FAFAF9]">{social.name}</span>
-                  <span className="text-sm text-[#A8A29E]">{social.handle}</span>
+                  <span className="font-semibold text-[#2C2418]">{social.name}</span>
+                  <span className="text-sm text-[#A89F91]">{social.handle}</span>
                 </a>
               ))}
             </div>

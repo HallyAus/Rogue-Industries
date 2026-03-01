@@ -32,17 +32,17 @@ export default function LessonsPage() {
       <JsonLd type="FAQPage" data={faqSchema} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0C0A09] pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-[#D97706]/5 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#FFFBF5] pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-[#4A7C6F]/[0.04] blur-3xl" />
         <div className="mx-auto max-w-4xl text-center relative">
           <ScrollReveal>
-            <span className="text-sm font-medium uppercase tracking-widest text-[#D97706]">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#4A7C6F]">
               Lessons
             </span>
-            <h1 className="mt-3 font-serif text-4xl font-bold text-[#FAFAF9] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 font-serif text-4xl font-bold text-[#2C2418] sm:text-5xl lg:text-6xl">
               Your Piano Journey Starts Here
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[#A8A29E] leading-relaxed">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[#8B7E6A] leading-relaxed">
               Personalised lessons designed around your goals, your pace, and the
               music you love. Available face-to-face in Ourimbah or online from
               anywhere.
@@ -52,17 +52,17 @@ export default function LessonsPage() {
       </section>
 
       {/* Face to Face */}
-      <Section id="face-to-face">
+      <Section dark id="face-to-face">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <ScrollReveal direction="left">
             <div>
-              <span className="text-sm font-medium uppercase tracking-widest text-[#D97706]">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#4A7C6F]">
                 In-Person
               </span>
-              <h2 className="mt-3 font-serif text-3xl font-bold text-[#FAFAF9] sm:text-4xl">
+              <h2 className="mt-3 font-serif text-3xl font-bold text-[#2C2418] sm:text-4xl">
                 Face-to-Face Lessons
               </h2>
-              <div className="mt-6 space-y-4 text-[#A8A29E] leading-relaxed">
+              <div className="mt-6 space-y-4 text-[#8B7E6A] leading-relaxed">
                 <p>
                   There&apos;s nothing quite like being in the same room, side by
                   side at the piano. Face-to-face lessons allow me to guide your
@@ -83,11 +83,11 @@ export default function LessonsPage() {
                   { label: "Duration", value: "30 or 60 minutes" },
                   { label: "Levels", value: "Beginner to advanced" },
                 ].map((item) => (
-                  <div key={item.label} className="rounded-lg border border-[#292524] bg-[#0C0A09] p-4">
-                    <p className="text-xs font-medium uppercase tracking-wider text-[#D97706]">
+                  <div key={item.label} className="rounded-xl border border-[#E8DFD0] bg-[#FFFBF5] p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[#4A7C6F]">
                       {item.label}
                     </p>
-                    <p className="mt-1 text-sm text-[#FAFAF9]">{item.value}</p>
+                    <p className="mt-1 text-sm font-medium text-[#2C2418]">{item.value}</p>
                   </div>
                 ))}
               </div>
@@ -95,8 +95,7 @@ export default function LessonsPage() {
           </ScrollReveal>
 
           <ScrollReveal direction="right">
-            {/* Map embed */}
-            <div className="overflow-hidden rounded-2xl border border-[#292524]">
+            <div className="overflow-hidden rounded-2xl border border-[#E8DFD0] shadow-md">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13264.841799458395!2d151.35!3d-33.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b72b7f3b02a2e1b%3A0x4017d681632b240!2sOurimbah%20NSW%202258!5e0!3m2!1sen!2sau!4v1709000000000!5m2!1sen!2sau"
                 width="100%"
@@ -113,43 +112,27 @@ export default function LessonsPage() {
       </Section>
 
       {/* Online */}
-      <Section dark id="online">
+      <Section id="online">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <ScrollReveal direction="left" className="order-2 lg:order-1">
-            <div className="rounded-2xl border border-[#292524] bg-[#1C1917] p-8">
-              <h3 className="mb-6 font-serif text-xl font-bold text-[#FAFAF9]">
+            <div className="rounded-2xl border border-[#E8DFD0] bg-white p-8 shadow-sm">
+              <h3 className="mb-6 font-serif text-xl font-bold text-[#2C2418]">
                 How Online Lessons Work
               </h3>
               <ol className="space-y-6">
                 {[
-                  {
-                    step: "01",
-                    title: "Book Your Slot",
-                    desc: "Choose a time that suits you via the contact form or email.",
-                  },
-                  {
-                    step: "02",
-                    title: "Get Set Up",
-                    desc: "You'll need a piano/keyboard, a device with camera, and a stable internet connection.",
-                  },
-                  {
-                    step: "03",
-                    title: "Join the Session",
-                    desc: "I'll send you a video link. We connect, and the lesson flows just like an in-person session.",
-                  },
-                  {
-                    step: "04",
-                    title: "Practice & Progress",
-                    desc: "After each lesson, you'll receive notes and exercises tailored to your session.",
-                  },
+                  { step: "01", title: "Book Your Slot", desc: "Choose a time that suits you via the contact form or email." },
+                  { step: "02", title: "Get Set Up", desc: "You'll need a piano/keyboard, a device with camera, and a stable internet connection." },
+                  { step: "03", title: "Join the Session", desc: "I'll send you a video link. We connect, and the lesson flows just like an in-person session." },
+                  { step: "04", title: "Practice & Progress", desc: "After each lesson, you'll receive notes and exercises tailored to your session." },
                 ].map((item) => (
                   <li key={item.step} className="flex gap-4">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#D97706]/10 text-sm font-bold text-[#D97706]">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#4A7C6F]/10 text-sm font-bold text-[#4A7C6F]">
                       {item.step}
                     </span>
                     <div>
-                      <p className="font-semibold text-[#FAFAF9]">{item.title}</p>
-                      <p className="mt-1 text-sm text-[#A8A29E]">{item.desc}</p>
+                      <p className="font-semibold text-[#2C2418]">{item.title}</p>
+                      <p className="mt-1 text-sm text-[#8B7E6A]">{item.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -159,13 +142,13 @@ export default function LessonsPage() {
 
           <ScrollReveal direction="right" className="order-1 lg:order-2">
             <div>
-              <span className="text-sm font-medium uppercase tracking-widest text-[#D97706]">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#4A7C6F]">
                 Remote
               </span>
-              <h2 className="mt-3 font-serif text-3xl font-bold text-[#FAFAF9] sm:text-4xl">
+              <h2 className="mt-3 font-serif text-3xl font-bold text-[#2C2418] sm:text-4xl">
                 Online Live Lessons
               </h2>
-              <div className="mt-6 space-y-4 text-[#A8A29E] leading-relaxed">
+              <div className="mt-6 space-y-4 text-[#8B7E6A] leading-relaxed">
                 <p>
                   Can&apos;t make it to Ourimbah? No worries. Online lessons
                   deliver the same personalised, quality instruction from
@@ -188,7 +171,7 @@ export default function LessonsPage() {
       </Section>
 
       {/* Pricing */}
-      <Section>
+      <Section dark>
         <SectionHeader
           title="Simple, Transparent Pricing"
           subtitle="No lock-in contracts. No hidden fees. Just great piano lessons."
@@ -197,7 +180,7 @@ export default function LessonsPage() {
       </Section>
 
       {/* FAQ */}
-      <Section dark>
+      <Section>
         <SectionHeader
           title="Frequently Asked Questions"
           subtitle="Got questions? I've got answers."
@@ -206,7 +189,7 @@ export default function LessonsPage() {
           <LessonsFaq />
         </div>
         <div className="mt-12 text-center">
-          <p className="mb-4 text-[#A8A29E]">
+          <p className="mb-4 text-[#8B7E6A]">
             Still have questions? I&apos;d love to hear from you.
           </p>
           <Button href="/contact">Get in Touch</Button>

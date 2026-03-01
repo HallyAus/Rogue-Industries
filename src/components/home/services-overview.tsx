@@ -39,7 +39,7 @@ function ServiceIcon({ icon }: { icon: "piano" | "video" | "music" }) {
 
 export function ServicesOverview() {
   return (
-    <Section dark>
+    <Section>
       <SectionHeader
         title="How I Can Help You"
         subtitle="Whether you prefer face-to-face connection or the flexibility of online learning, there's a path for you."
@@ -48,25 +48,22 @@ export function ServicesOverview() {
       <div className="grid gap-8 md:grid-cols-3">
         {SERVICES.map((service, index) => (
           <ScrollReveal key={service.title} delay={index * 0.1}>
-            <Link href={service.href} className="group block">
-              <div className="relative overflow-hidden rounded-2xl border border-[#292524] bg-[#1C1917] p-8 transition-all duration-500 hover:border-[#D97706]/30 hover:shadow-2xl hover:shadow-amber-900/10 hover:-translate-y-2">
-                {/* Gradient hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#D97706]/0 to-[#D97706]/0 transition-all duration-500 group-hover:from-[#D97706]/5 group-hover:to-transparent" />
-
+            <Link href={service.href} className="group block h-full">
+              <div className="relative h-full overflow-hidden rounded-2xl border border-[#E8DFD0] bg-white p-8 shadow-sm transition-all duration-500 hover:shadow-xl hover:shadow-[#4A7C6F]/5 hover:-translate-y-2">
                 <div className="relative">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#D97706]/10 text-[#D97706] transition-all duration-300 group-hover:bg-[#D97706]/20 group-hover:scale-110">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4A7C6F]/10 text-[#4A7C6F] transition-all duration-300 group-hover:bg-[#4A7C6F] group-hover:text-white group-hover:scale-110">
                     <ServiceIcon icon={service.icon} />
                   </div>
 
-                  <h3 className="mb-3 text-xl font-serif font-bold text-[#FAFAF9] transition-colors group-hover:text-[#D97706]">
+                  <h3 className="mb-3 text-xl font-serif font-bold text-[#2C2418] transition-colors group-hover:text-[#4A7C6F]">
                     {service.title}
                   </h3>
 
-                  <p className="text-[#A8A29E] leading-relaxed">
+                  <p className="text-[#8B7E6A] leading-relaxed">
                     {service.description}
                   </p>
 
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#D97706] transition-all group-hover:gap-3">
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#4A7C6F] transition-all group-hover:gap-3">
                     Learn more
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M3 8h10m0 0L9 4m4 4L9 12" />

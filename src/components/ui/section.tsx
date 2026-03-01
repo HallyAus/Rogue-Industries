@@ -11,7 +11,7 @@ export function Section({ children, className = "", id, dark = false }: SectionP
   return (
     <section
       id={id}
-      className={`py-20 px-4 sm:px-6 lg:px-8 ${dark ? "bg-[#0C0A09]" : "bg-[#1C1917]"} ${className}`}
+      className={`py-20 px-4 sm:px-6 lg:px-8 ${dark ? "bg-white" : "bg-[#FFFBF5]"} ${className}`}
     >
       <div className="mx-auto max-w-7xl">{children}</div>
     </section>
@@ -29,15 +29,19 @@ export function SectionHeader({
 }) {
   return (
     <div className={`mb-16 text-center ${className}`}>
-      <h2 className="font-serif text-3xl font-bold tracking-tight text-[#FAFAF9] sm:text-4xl lg:text-5xl">
+      <h2 className="font-serif text-3xl font-bold tracking-tight text-[#2C2418] sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {subtitle && (
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-[#A8A29E]">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-[#8B7E6A]">
           {subtitle}
         </p>
       )}
-      <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-[#D97706] to-[#F59E0B]" />
+      <div className="mx-auto mt-6 flex items-center justify-center gap-2">
+        <div className="h-px w-12 bg-[#E8DFD0]" />
+        <div className="h-2 w-2 rounded-full bg-[#4A7C6F]" />
+        <div className="h-px w-12 bg-[#E8DFD0]" />
+      </div>
     </div>
   );
 }

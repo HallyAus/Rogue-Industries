@@ -13,17 +13,17 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-gradient-to-r from-[#D97706] to-[#F59E0B] text-[#0C0A09] font-semibold hover:from-[#F59E0B] hover:to-[#D97706] shadow-lg shadow-amber-900/20",
+    "bg-[#4A7C6F] text-white font-semibold hover:bg-[#3A6357] shadow-md shadow-[#4A7C6F]/20 hover:shadow-lg hover:shadow-[#4A7C6F]/30",
   secondary:
-    "bg-[#92400E] text-[#FAFAF9] font-semibold hover:bg-[#D97706]",
+    "bg-[#D4943A] text-white font-semibold hover:bg-[#C08432] shadow-md shadow-[#D4943A]/20",
   outline:
-    "border-2 border-[#D97706] text-[#D97706] font-semibold hover:bg-[#D97706] hover:text-[#0C0A09]",
+    "border-2 border-[#4A7C6F] text-[#4A7C6F] font-semibold hover:bg-[#4A7C6F] hover:text-white",
 };
 
 const sizes = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-6 py-3 text-base",
-  lg: "px-8 py-4 text-lg",
+  sm: "px-4 py-2 text-sm rounded-lg",
+  md: "px-6 py-3 text-base rounded-xl",
+  lg: "px-8 py-4 text-lg rounded-xl",
 };
 
 export function Button({
@@ -35,7 +35,7 @@ export function Button({
   type = "button",
   onClick,
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-lg transition-all duration-300 ${variants[variant]} ${sizes[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center transition-all duration-300 ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (href) {
     return (
