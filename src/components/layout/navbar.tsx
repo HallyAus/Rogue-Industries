@@ -17,10 +17,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    setIsMobileOpen(false);
-  }, [pathname]);
-
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-500 ${
@@ -120,6 +116,7 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    onClick={() => setIsMobileOpen(false)}
                     className={`block rounded-xl px-4 py-3 text-base font-medium transition-colors ${
                       isActive
                         ? "bg-[#4A7C6F]/10 text-[#4A7C6F]"
@@ -133,6 +130,7 @@ export function Navbar() {
               <div className="pt-2">
                 <Link
                   href="/contact"
+                  onClick={() => setIsMobileOpen(false)}
                   className="block rounded-xl bg-[#4A7C6F] px-4 py-3 text-center text-base font-semibold text-white"
                 >
                   Book a Lesson
